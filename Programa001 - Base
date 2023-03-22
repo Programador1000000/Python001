@@ -1,8 +1,11 @@
-import pyautogui
+iimport pyautogui
 import time
+import pandas as pd
+import nump as np
+
 
 #alerta
-pyautogui.alert("O Codigo vai iniciar por favor não use nenhuma tecla do computador")
+pyautogui.alert("O Codigo vai iniciar por favor não use nenhuma tecla e mouse do computador")
 
 #pausa de opções
 pyautogui.PAUSE = 0.5
@@ -53,7 +56,8 @@ time.sleep(5)
 pyautogui.doubleClick()
 
 
-time.sleep(30)
+time.sleep(6)
+
 #Notas Fiscais do Excel
 pyautogui.moveTo(71, 307)
 time.sleep(1)
@@ -89,6 +93,78 @@ time.sleep(1)
 
 #Volta com Informação tabela excel
 time.sleep(1)
-pyautogui.press('esc')
-pyautogui.press('esc')
-pyautogui.hotkey('alt' , 'tab' )
+pyautogui.hotkey('win' , 'tab')
+pyautogui.moveTo(256, 617)
+pyautogui.click()
+
+#Colocar Informação de Pacote na celula
+pyautogui.moveTo(356, 308)
+time.sleep(1)
+pyautogui.rightClick()
+time.sleep(1)
+pyautogui.moveTo(419, 469)
+pyautogui.click()
+
+
+
+#pegar informação do Cliente
+pyautogui.hotkey('win', 'tab')
+pyautogui.moveTo(739, 336)
+pyautogui.click()
+
+#Copiar Informação do Cliente
+pyautogui.moveTo(281, 436)
+pyautogui.tripleClick()
+time.sleep(1)
+pyautogui.rightClick()
+pyautogui.moveTo(497, 455)
+pyautogui.click()
+
+
+#Voltar para  a Planilha do Excel - copiar informação do Cliente
+pyautogui.hotkey('win', 'tab')
+pyautogui.moveTo(711, 305)
+pyautogui.click()
+time.sleep(3)
+pyautogui.moveTo(1730, 309)
+pyautogui.rightClick()
+time.sleep(1)
+pyautogui.moveTo(1553, 462)
+pyautogui.click()
+
+
+#Voltar para tela do sistema pegar data de Entrega 
+pyautogui.hotkey('win', 'tab')
+pyautogui.moveTo(673, 304)
+pyautogui.click()
+time.sleep(3)
+pyautogui.moveTo(1819, 19)
+pyautogui.click()
+time.sleep(1)
+pyautogui.moveTo(497, 997)
+pyautogui.tripleClick()
+time.sleep(1)
+pyautogui.rightClick()
+pyautogui.moveTo(562, 807)
+pyautogui.click()
+
+#Retorno para planilha em excel
+pyautogui.hotkey('win', 'tab')
+pyautogui.moveTo(679, 312)
+pyautogui.click()
+time.sleep(1)
+pyautogui.moveTo(1194, 308)
+pyautogui.rightClick()
+pyautogui.moveTo(1300, 462)
+pyautogui.click()
+
+
+#Lista de Notas fiscais a serem pesquisadas
+
+
+
+
+
+
+
+#função se
