@@ -1,0 +1,94 @@
+import pyautogui
+import time
+
+#alerta
+pyautogui.alert("O Codigo vai iniciar por favor não use nenhuma tecla do computador")
+
+#pausa de opções
+pyautogui.PAUSE = 0.5
+
+#Abrir o ssw
+
+pyautogui.press('winleft')
+pyautogui.write('Chrome')
+pyautogui.press('enter')
+time.sleep(1)
+#pesquisar google chrome
+pyautogui.write('https://sistema.ssw.inf.br/bin/ssw0422')
+time.sleep(0.5)
+#apertar enter
+pyautogui.press('enter')
+#entrada SSW
+pyautogui.moveTo(1027, 287)
+time.sleep(1)
+pyautogui.click()
+time.sleep(5)
+#entrada opção
+pyautogui.write('101')
+#expansão de Pagina Point(x=1836, y=24)
+pyautogui.moveTo(1836, 24)
+time.sleep(0.8)
+pyautogui.click()
+
+time.sleep(1)
+#data SSW
+pyautogui.moveTo(398, 389)
+time.sleep(1)
+pyautogui.doubleClick()
+pyautogui.write('010122')
+time.sleep(1)
+pyautogui.write('0')
+time.sleep(0.3)
+pyautogui.press('enter')
+time.sleep(1)
+
+#Voltar para a area de Trabalho
+pyautogui.hotkey('winleft' , 'd')
+
+time.sleep(1)
+
+#Abrir Arquivo do Excel
+pyautogui.moveTo(1480, 673)
+time.sleep(5)
+pyautogui.doubleClick()
+
+
+time.sleep(30)
+#Notas Fiscais do Excel
+pyautogui.moveTo(71, 307)
+time.sleep(1)
+pyautogui.rightClick()
+pyautogui.moveTo(212, 396)
+pyautogui.click()
+
+#Volta para o Sistema
+#Deixar somente Duas abas abertas
+pyautogui.hotkey('alt' , 'tab')
+time.sleep(1)
+pyautogui.moveTo(460, 193)
+pyautogui.click()
+pyautogui.rightClick()
+pyautogui.moveTo(551, 393)
+time.sleep(1)
+pyautogui.click()
+pyautogui.press('enter')
+
+time.sleep(10)
+
+#Campo de Pesquisa
+pyautogui.press('enter')
+time.sleep(2)
+pyautogui.moveTo(871, 620)
+pyautogui.tripleClick()
+time.sleep(0.8)
+pyautogui.rightClick()
+pyautogui.moveTo(927, 634)
+pyautogui.click()
+
+time.sleep(1)
+
+#Volta com Informação tabela excel
+time.sleep(1)
+pyautogui.press('esc')
+pyautogui.press('esc')
+pyautogui.hotkey('alt' , 'tab' )
